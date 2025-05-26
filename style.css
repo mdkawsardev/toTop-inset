@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* html {
+    scroll-behavior: smooth;
+} */
+
+.box {
+    width: 300px;
+    height: 300px;
+    background-color: green;
+    margin: auto;
+    position: relative;
+    & .mini_box {
+        position: absolute;
+        background-color: red;
+        /* top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px; */
+        /* better way to set the elements with positioning  */
+        inset: 10px 5px 15px 20px;
+    }
+}
+
+.toTop {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    & button {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        background-color: #08f708;
+        cursor: pointer;
+        animation: toTop 2s linear infinite;
+    }
+}
+
+@keyframes toTop {
+    0% {
+        transform: translateY(0px)
+    }
+    50% {
+        transform: translateY(10px)
+    }
+    100% {
+        transform: translateY(0px)
+    }
+}
+
+
+
